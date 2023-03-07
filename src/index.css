@@ -15,5 +15,20 @@ code {
 
 .postList{
   overflow: scroll; 
-  height: 90vh;
+  height: 88.5vh;
+}
+
+
+.mainDiv{
+  width: 99.2vw;
+}
+
+
+.detail{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.detailSection{
+  width: 90%;
 }

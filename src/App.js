@@ -5,6 +5,7 @@ import './App.css';
 import Card from './Card'
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+import Navbar from './Navbar';
 
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
 </div>
 }
 {!loading && 
-  <div className='row'> 
+<div className='mainDiv'>
+  <Navbar/>
+<div className='row'> 
 <div className="d-flex flex-wrap col-4  m-2 justify-content-around postList">
       { posts.map((post,index)=>{
             return <Card post={post} key={index} detail={detail}/>
@@ -54,12 +57,12 @@ function App() {
       }
       
     </div>
-    <div className='col-7'>
+    <div className='col-7 detail'>
       {
-        !post && <div><h1>hi i am here</h1></div>
+        !post && <div><h5 className='text-center'>No post will be selected</h5></div>
       }
       {
-        post && <div>
+        post && <div className='detailSection'>
           <div className="card mb-3">
   <div className="row g-0">
     <div className="col-md-4">
@@ -77,6 +80,7 @@ function App() {
       }
     </div>
 
+</div>
 </div>
 }
 </>
