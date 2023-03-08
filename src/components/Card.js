@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+// ..............................................................card Component..................................................................
 
 export default function BasicCard(props) {
   let title=props.post.title

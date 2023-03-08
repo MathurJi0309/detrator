@@ -1,4 +1,4 @@
-
+//..........................................................import component and dependencies......................................................
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../App.css';
@@ -8,11 +8,16 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Navbar from './Header';
 import Footer from './Footer';
 
+//...................................................................App component .............................................................
 
 
 function App() {
   const[posts,setPosts]= useState([]);
   const [loading,setLoading]=useState(true)
+
+//................................................................Fetching with Axios.............................................................
+
+
   const fetchPost=async ()=>{
     const response=await axios.get("https://dummyjson.com/posts");
     setPosts(response.data.posts);
@@ -23,9 +28,19 @@ function App() {
     fetchPost();
   },[]);
 
+//..................................................................here is JSX of page......................................................
+
+
   return (
 <>
+
+{/* .....................................................................lazy loder............................................................ */}
+
+
 {loading &&      <div className='d-flex align-items-center m-20'>
+
+
+
 
  <Box sx={{ width: '100%' }} className='m-20'>
       <LinearProgress />
@@ -33,6 +48,11 @@ function App() {
 
 </div>
 }
+
+{/* .....................................................................post show after fetch in the card............................................................ */}
+
+
+
 {!loading && 
 <div className='mainDiv'>
   <Navbar/>

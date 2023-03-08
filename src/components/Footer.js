@@ -6,6 +6,9 @@ import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+
+// .......................................Footer component with the company name attach the company link..........................................
+
 export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState('recents');
 
