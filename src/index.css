@@ -32,3 +32,15 @@ code {
 .detailSection{
   width: 90%;
 }
+
+.mainD{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cards{
+  width: 400px;
+  height: 400px;
+  margin-top: 2%;
+}
